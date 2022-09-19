@@ -18,26 +18,31 @@
 <script setup>
 const { ref } = require('@vue/reactivity')
 
-const isShow = ref(true)
+const isShow = ref(false)
+setTimeout(() => {
+  isShow.value = true
+}, 1000)
 setTimeout(() => {
   isShow.value = false
-}, 3000)
+}, 6000)
 </script>
 
 <style lang="less" scoped>
 .hello-enter-from,
 .hello-leave-to {
+  transform: translateX(300px);
   opacity: 0;
 }
 
 .hello-enter-to,
 .hello-leave-from {
   opacity: 1;
+  transform: translateX(0px);
 }
 
 .hello-enter-active,
 .hello-leave-active {
-  transition: opacity 2s ease;
+  transition: all 2s ease;
 }
 .hello-visitor {
   position: fixed;

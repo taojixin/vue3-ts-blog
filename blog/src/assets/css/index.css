@@ -3,4 +3,6 @@
 /* 重置样式 */
 @import './reset.css';
 /* 引入字体 */
-@import './fonts.css'
+@import './fonts.css';
+/* 引入字体图标 */
+@import '../iconfonts/iconfont.css'
