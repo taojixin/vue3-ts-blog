@@ -8,6 +8,6 @@
 <style lang="less" scoped>
 .center {
   flex: 1;
-  border: 1px solid black;
+  // background-color: aliceblue;
 }
 </style>

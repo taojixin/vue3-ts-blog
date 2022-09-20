@@ -16,6 +16,6 @@ import LeftAnnouncement from './left-announcement.vue'
   display: flex;
   flex-direction: column;
   width: 300px;
-  border: 1px solid blue;
+  // border: 1px solid blue;
 }
 </style>
