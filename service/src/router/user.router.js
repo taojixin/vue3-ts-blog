@@ -5,9 +5,10 @@ const {
   create
 } = require('../controller/user.controller')
 const {
-  verifyUser
+  verifyUser,
+  handlePassword
 } = require('../midddleware/user.middleware')
 
-userRouter.post('/', verifyUser, create)
+userRouter.post('/', verifyUser, handlePassword, create)
 
 module.exports = userRouter;
