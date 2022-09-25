@@ -1,6 +1,7 @@
 <template>
-  <div class="left-about">
-    <img src="@/assets/Headportrait.jpg" alt="" />
+  <div class="left-about shadow-box">
+    <img src="@/assets/Headportrait.jpg"
+         alt="" />
     <span class="my-title">Libertys</span>
     <p class="motto">
       如果debugging是一种消灭bug的过程，那编程就一定是把bug放进去的过程。
@@ -22,11 +23,9 @@
 .left-about {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
-  box-shadow: 0px 5px 5px 1px gray;
   align-items: center;
   height: 300px;
-  border-radius: 10px;
+  background-color: white;
 
   img {
     width: 100px;
@@ -38,13 +37,11 @@
   .my-title {
     margin: 5px 0;
     font-size: 20px;
-    color: blue;
     font-weight: bold;
   }
 
   .motto {
     text-indent: 2em;
-    color: aqua;
     padding: 0 20px;
   }
 

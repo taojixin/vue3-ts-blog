@@ -1,5 +1,5 @@
 const fs = require('fs')
-const useRoutes = function () {
+const pcRoutes = function () {
   fs.readdirSync(__dirname).forEach(file => {
     if (file === 'index.js') return;
     const router = require(`./${file}`)
@@ -9,4 +9,4 @@ const useRoutes = function () {
   })
 }
 
-module.exports = useRoutes
+module.exports = pcRoutes

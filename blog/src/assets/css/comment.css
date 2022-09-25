@@ -1,8 +1,44 @@
 html {
   font-family: 'yuanrun';
+  cursor: url(http://libertys.cn/img/blog/Arrow.cur), default;
 }
+
+body {
+  background-image: linear-gradient(to right, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  
+}
+
 
 .page-common {
   margin: 70px 100px 0;
   border: 1px solid black;
+}
+
+/* 更改滚动条样式 */
+/* 滚动条整体部分 可以设置宽度高度等 */
+::-webkit-scrollbar
+{
+    width: 10px;
+    /* 高度：x 轴方向的滚动条高度 */
+    height: 5px;
+    background-color: transparent;
+    
+}
+/* 外出轨道 */
+::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: transparent;
+}
+/* 滚动的滑块 */
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #c2d0e1;
+}
+
+/* 盒子阴影 */
+.shadow-box {
+  box-shadow: 0 0 20px 1px rgb(188, 185, 185);
+  border-radius: 5px;
 }

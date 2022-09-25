@@ -1,13 +1,17 @@
 <template>
-  <div class="center">中间</div>
+  <div class="center">
+    <entry />
+  </div>
 </template>
 
 <script setup>
+import Entry from './entry.vue'
 </script>
 
 <style lang="less" scoped>
 .center {
   flex: 1;
-  // background-color: aliceblue;
+  padding-top: 50px;
+  margin: 30px;
 }
 </style>

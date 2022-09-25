@@ -5,7 +5,6 @@
       <div class="top">
         <left />
         <center />
-        <right />
       </div>
       <bottom />
     </div>
@@ -14,10 +13,9 @@
 
 <script setup>
 import HelloVisitor from '@/components/HelloVisitor'
-import Left from './cpns/left.vue'
-import Center from './cpns/center.vue'
-import Right from './cpns/right.vue'
 import Bottom from './cpns/bottom.vue'
+import Center from './cpns/center.vue'
+import Left from './cpns/left.vue'
 </script>
 
 <style lang="less" scoped>
