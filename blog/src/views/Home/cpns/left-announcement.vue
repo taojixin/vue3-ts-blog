@@ -1,5 +1,8 @@
 <template>
-  <div class="left-announcement">公告</div>
+  <div class="left-announcement shadow-box">
+    <h2>公告</h2>
+    <p>暂无</p>
+  </div>
 </template>
 
 <script setup>
@@ -9,6 +12,13 @@
 .left-announcement {
   height: 300px;
   margin-top: 100px;
-  // background-color: blue;
+  background-color: white;
+
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-indent: 2em;
+  }
 }
 </style>

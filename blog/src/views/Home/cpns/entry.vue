@@ -25,7 +25,8 @@
   display: flex;
   background-color: white;
   padding: 5px;
-  height: 300px;
+  height: 250px;
+  margin-bottom: 20px;
   cursor: pointer;
   &:hover {
     .img {

@@ -1,6 +1,9 @@
 <template>
   <div class="center">
     <entry />
+    <entry />
+    <entry />
+    <entry />
   </div>
 </template>
 
@@ -11,7 +14,6 @@ import Entry from './entry.vue'
 <style lang="less" scoped>
 .center {
   flex: 1;
-  padding-top: 50px;
-  margin: 30px;
+  margin: 0 30px;
 }
 </style>

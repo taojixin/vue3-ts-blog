@@ -1,40 +1,48 @@
 <template>
   <transition name="top">
-    <div class="top-nav-bar" v-if="isShowTopBar">
-      <div class="title" @click="toPage('home')">
+    <div class="top-nav-bar"
+         ref="topNav"
+         v-if="isShowTopBar">
+      <div class="title"
+           @click="toPage('home')">
         <span class="text">Libertys</span>
       </div>
-      <div class="menus" v-if="navBar.isShow">
-        <span class="item" @click="toPage('home')">
+      <div class="menus"
+           v-if="navBar.isShow">
+        <span class="item"
+              @click="toPage('home')">
           <i class="iconfont icon-shouyefill size"></i>
           首页
         </span>
-        <span class="item" @click="toPage('articles')">
+        <span class="item"
+              @click="toPage('articles')">
           <i class="iconfont icon-16 size"></i>
           文章
         </span>
-        <span class="item" @click="toPage('collections')">
+        <span class="item"
+              @click="toPage('collections')">
           <i class="iconfont icon-shoucangjia size"></i>
           收藏
         </span>
-        <span class="item" @click="toPage('life')">
+        <span class="item"
+              @click="toPage('life')">
           <i class="iconfont icon-icon size"></i>
           生活
         </span>
-        <span class="item" @click="toPage('message')">
+        <span class="item"
+              @click="toPage('message')">
           <i class="iconfont icon-liuyanfill size"></i>
           留言
         </span>
-        <span class="item" @click="toPage('about')">
+        <span class="item"
+              @click="toPage('about')">
           <i class="iconfont icon-guanyu size"></i>
           关于
         </span>
       </div>
-      <div
-        class="select iconfont icon-shezhi1"
-        v-if="!navBar.isShow"
-        @click="navBar.isShowTop = !navBar.isShowTop"
-      ></div>
+      <div class="select iconfont icon-shezhi1"
+           v-if="!navBar.isShow"
+           @click="navBar.isShowTop = !navBar.isShowTop"></div>
     </div>
   </transition>
 </template>
@@ -70,6 +78,18 @@ window.addEventListener('resize', () => {
 const toPage = (path) => {
   router.push('/' + path)
 }
+
+// 控制导航栏的背景颜色
+let topNav = ref()
+window.addEventListener('scroll', () => {
+  let scrollTop = document.documentElement.scrollTop
+  console.log(scrollTop)
+  if (scrollTop > 100) {
+    topNav.value.style.background = '#f2f1f1'
+  } else {
+    topNav.value.style.background = 'transparent'
+  }
+})
 </script>
 
 <style lang="less" scoped>
@@ -83,12 +103,12 @@ const toPage = (path) => {
   align-items: center;
   padding: 0 30px;
   height: 60px;
-  background-color: aliceblue;
+  z-index: 999;
 
   .title {
     font-size: 30px;
     // border: 1px solid pink;
-    position: relative;
+    // position: relative;
     &:hover {
       cursor: pointer;
     }

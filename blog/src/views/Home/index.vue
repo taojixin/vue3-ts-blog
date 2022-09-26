@@ -20,6 +20,7 @@ import Left from './cpns/left.vue'
 
 <style lang="less" scoped>
 .home {
+  padding-top: 40px;
   .top {
     display: flex;
     justify-content: space-between;
