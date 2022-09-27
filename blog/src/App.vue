@@ -1,22 +1,15 @@
 <template>
   <top-nav-bar></top-nav-bar>
-  <fall-nav-bar v-show="navBar.isShowTop && !navBar.isShow" />
+  <fall-nav-bar v-show="hidden.isShowTop" />
   <router-view />
 </template>
 
 <script setup>
-import TopNavBar from '@/components/NavBar/TopNavBar.vue'
 import FallNavBar from '@/components/NavBar/FallNavBar.vue'
-import useNavbarStore from '@/stores/modules/navbar'
-// import { ref } from '@vue/reactivity'
+import TopNavBar from '@/components/NavBar/TopNavBar.vue'
+import useHiddenStore from '@/stores/modules/hidden'
 
-// let isShowTopBar = ref(false)
-
-// setTimeout(() => {
-//   isShowTopBar.value = true
-// }, 1000)
-
-const navBar = useNavbarStore()
+const hidden = useHiddenStore()
 </script>
 
 

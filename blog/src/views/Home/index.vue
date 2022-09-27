@@ -3,7 +3,7 @@
     <div class="home page-common">
       <hello-visitor></hello-visitor>
       <div class="top">
-        <left />
+        <left v-show="hidden.isShow" />
         <center />
       </div>
       <bottom />
@@ -13,9 +13,12 @@
 
 <script setup>
 import HelloVisitor from '@/components/HelloVisitor'
+import useHiddenStore from '@/stores/modules/hidden'
 import Bottom from './cpns/bottom.vue'
 import Center from './cpns/center.vue'
 import Left from './cpns/left.vue'
+
+const hidden = useHiddenStore()
 </script>
 
 <style lang="less" scoped>

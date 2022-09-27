@@ -8,7 +8,7 @@
         <span class="text">Libertys</span>
       </div>
       <div class="menus"
-           v-if="navBar.isShow">
+           v-if="hidden.isShow">
         <span class="item"
               @click="toPage('home')">
           <i class="iconfont icon-shouyefill size"></i>
@@ -41,38 +41,26 @@
         </span>
       </div>
       <div class="select iconfont icon-shezhi1"
-           v-if="!navBar.isShow"
-           @click="navBar.isShowTop = !navBar.isShowTop"></div>
+           v-if="!hidden.isShow"
+           @click="hidden.isShowTop = !hidden.isShowTop"></div>
     </div>
   </transition>
 </template>
 
 <script setup>
-import useNavbarStore from '@/stores/modules/navbar'
+import useHiddenStore from '@/stores/modules/hidden'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+
+// 响应式
+const hidden = useHiddenStore()
 
 // 动画
 let isShowTopBar = ref(false)
 setTimeout(() => {
   isShowTopBar.value = true
 }, 10)
-
-// 响应式
-const navBar = useNavbarStore()
-// 判读窗口大小控制menus的显示与隐藏
-if (document.documentElement.clientWidth > 700) {
-  navBar.isShow = true
-}
-window.addEventListener('resize', () => {
-  let clientWidth = document.documentElement.clientWidth
-  if (clientWidth < 700) {
-    navBar.monitorScreenChange()
-  } else {
-    navBar.isShow = true
-  }
-})
 
 // 页面跳转
 const toPage = (path) => {
