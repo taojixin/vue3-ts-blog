@@ -24,13 +24,11 @@ import LeftAnnouncement from './left-announcement.vue'
 .left-enter-from,
 .left-leave-to {
   opacity: 0;
-  // transform: translateY(-300px);
 }
 
 .left-enter-to,
 .left-leave-from {
   opacity: 1;
-  // transform: translateY(0px);
 }
 
 .left-enter-active,

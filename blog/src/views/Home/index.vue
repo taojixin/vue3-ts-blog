@@ -3,7 +3,7 @@
     <div class="home page-common">
       <hello-visitor></hello-visitor>
       <div class="top">
-        <left v-show="hidden.isShow" />
+        <left v-show="hidden.isHomeLeft" />
         <center />
       </div>
       <bottom />

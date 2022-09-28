@@ -23,6 +23,7 @@
 <style lang="less" scoped>
 .entry {
   display: flex;
+  flex-direction: row;
   background-color: white;
   padding: 5px;
   height: 250px;
@@ -48,6 +49,15 @@
       background-size: 100% 100%;
       transition: all 0.8s;
     }
+  }
+}
+@media (min-width: 750px) {
+}
+
+@media (max-width: 749px) {
+  .entry {
+    flex-direction: column;
+    height: 400px;
   }
 }
 </style>

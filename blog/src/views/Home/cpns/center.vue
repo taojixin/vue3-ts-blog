@@ -15,5 +15,6 @@ import Entry from './entry.vue'
 .center {
   flex: 1;
   margin: 0 30px;
+  // min-width: 375px;
 }
 </style>

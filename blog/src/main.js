@@ -18,6 +18,7 @@ const hidden = useHiddenStore()
 // 判读窗口大小控制menus的显示与隐藏
 if (document.documentElement.clientWidth < 700) {
   hidden.isShow = false
+  hidden.isHomeLeft = false
 }
 window.addEventListener('resize', () => {
   let clientWidth = document.documentElement.clientWidth
@@ -25,5 +26,10 @@ window.addEventListener('resize', () => {
     hidden.monitorScreenChange()
   } else {
     hidden.isShow = true
+  }
+  if (clientWidth < 1000) {
+    hidden.isHomeLeft = false
+  } else {
+    hidden.isHomeLeft = true
   }
 })

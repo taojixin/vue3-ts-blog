@@ -3,8 +3,12 @@ import { defineStore } from 'pinia'
 
 const useHiddenStore = defineStore('hidden', {
   state: () => ({
+    // >700时menu的显示与隐藏
     isShow: true,
-    isShowTop: false
+    // <700后menu的显示与隐藏
+    isShowTop: false,
+    // 首页left的显示与隐藏
+    isHomeLeft: true
   }),
   actions: {
     monitorScreenChange() {

@@ -71,7 +71,6 @@ const toPage = (path) => {
 let topNav = ref()
 window.addEventListener('scroll', () => {
   let scrollTop = document.documentElement.scrollTop
-  console.log(scrollTop)
   if (scrollTop > 100) {
     topNav.value.style.background = '#f2f1f1'
   } else {
