@@ -26,7 +26,7 @@ const hidden = useHiddenStore()
   padding-top: 40px;
   .top {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 }
 

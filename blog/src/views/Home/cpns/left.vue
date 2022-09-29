@@ -19,6 +19,7 @@ import LeftAnnouncement from './left-announcement.vue'
   display: flex;
   flex-direction: column;
   width: 300px;
+  margin-right: 30px;
 }
 
 .left-enter-from,

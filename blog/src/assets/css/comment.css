@@ -9,7 +9,7 @@ body {
 
 /* 每个页面都有的样式：如home页 */
 .page-common {
-  margin: 70px 100px 0;
+  margin: 70px 5% 0;
   border: 1px solid black;
 }
 

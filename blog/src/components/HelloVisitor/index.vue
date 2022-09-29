@@ -1,9 +1,12 @@
 <template>
   <transition name="hello">
-    <div class="hello-visitor" v-if="isShow">
+    <div class="hello-visitor"
+         v-if="isShow">
       <div class="container">
         <div class="top">
-          <img src="@/assets/Headportrait.jpg" class="portroit" alt="" />
+          <img src="@/assets/Headportrait.jpg"
+               class="portroit"
+               alt="" />
           <span class="date">2022年9月17日21：48</span>
           <span>X</span>
         </div>
@@ -49,6 +52,7 @@ setTimeout(() => {
   top: 100px;
   right: 10px;
   width: 25%;
+  z-index: 999;
 
   .container {
     display: flex;

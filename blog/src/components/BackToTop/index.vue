@@ -37,6 +37,7 @@ const backToTop = () => {
   width: 30px;
   border-radius: 30px;
   background-color: blue;
+  z-index: 999;
   &:hover {
     cursor: pointer;
   }
