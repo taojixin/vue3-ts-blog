@@ -7,6 +7,11 @@ body {
   background-image: linear-gradient(to right, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* 每个页面都有的样式：如home页 */
 .page-common {
   margin: 70px 5% 0;

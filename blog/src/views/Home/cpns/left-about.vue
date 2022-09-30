@@ -1,17 +1,22 @@
 <template>
   <div class="left-about shadow-box">
-    <img src="@/assets/Headportrait.jpg"
-         alt="" />
+    <img class="my-img"
+         src="@/assets/Headportrait.jpg" />
     <span class="my-title">Libertys</span>
     <p class="motto">
       如果debugging是一种消灭bug的过程，那编程就一定是把bug放进去的过程。
     </p>
 
     <div class="contact">
-      <i class="iconfont icon-github-fill"></i>
-      <i class="iconfont icon-QQ-circle-fill"></i>
-      <i class="iconfont icon-weixin1"></i>
-      <i class="iconfont icon-csdn"></i>
+      <a href="https://github.com/taojixin"
+         target="blank"><i class="iconfont icon-github-fill"></i></a>
+      <span class="qq-box">
+        <i class="iconfont icon-QQ-circle-fill"></i>
+        <img src="@/assets/img/contact/qq.png"
+             class="qq-img">
+      </span>
+      <i class="iconfont icon-weixin2"></i>
+      <i class="iconfont icon-csdn1"></i>
     </div>
   </div>
 </template>
@@ -27,7 +32,7 @@
   height: 300px;
   background-color: white;
 
-  img {
+  .my-img {
     width: 100px;
     height: 100px;
     margin-top: 10px;
@@ -51,6 +56,25 @@
       margin: 0 10px;
       &:hover {
         cursor: pointer;
+        color: gray;
+      }
+    }
+    .qq-box {
+      position: relative;
+
+      &:hover {
+        .qq-img {
+          display: block;
+        }
+      }
+
+      .qq-img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: -120px;
+        left: -20px;
+        display: none;
       }
     }
   }
