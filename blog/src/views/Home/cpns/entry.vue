@@ -89,7 +89,7 @@ defineProps({
     .img {
       width: 100%;
       height: 100%;
-      background-image: url(../../../assets/Headportrait.jpg);
+      background-image: url(http://libertys.cn/img/yuansheng/qin.png);
       background-position: center center;
       background-size: 100% 100%;
       transition: all 0.8s;
