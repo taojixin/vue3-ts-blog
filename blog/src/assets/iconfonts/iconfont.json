@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1129689",
+      "name": "差号",
+      "font_class": "chahao",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "10468789",
+      "name": "雪人你好呀",
+      "font_class": "icon-test",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "12550617",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
       "icon_id": "145484",
       "name": "标签",
       "font_class": "biaoqian",
