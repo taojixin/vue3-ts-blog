@@ -13,6 +13,11 @@
   height: 300px;
   margin-top: 100px;
   background-color: white;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: translateY(5px);
+  }
 
   h2 {
     text-align: center;

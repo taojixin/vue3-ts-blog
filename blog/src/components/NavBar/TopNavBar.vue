@@ -40,9 +40,9 @@
           关于
         </span>
       </div>
-      <div class="select iconfont icon-shezhi1"
+      <div class="select iconfont icon-caidan"
            v-if="!hidden.isShow"
-           @click="hidden.isShowTop = !hidden.isShowTop"></div>
+           @click="changeFallNavBar"></div>
     </div>
   </transition>
 </template>
@@ -71,16 +71,22 @@ const toPage = (path) => {
 let topNav = ref()
 window.addEventListener('scroll', () => {
   let scrollTop = document.documentElement.scrollTop
-  if (scrollTop > 100) {
-    topNav.value.style.background = '#f2f1f1'
+  if (scrollTop > 50) {
+    topNav.value.style.color = 'white'
   } else {
-    topNav.value.style.background = 'transparent'
+    topNav.value.style.color = 'black'
   }
 })
+
+const changeFallNavBar = () => {
+  hidden.isShowTop = !hidden.isShowTop
+}
 </script>
 
 <style lang="less" scoped>
 .top-nav-bar {
+  /* 模糊大小就是靠的blur这个函数中的数值大小 */
+  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 0;
@@ -121,8 +127,10 @@ window.addEventListener('scroll', () => {
 
   .select {
     font-size: 30px;
+    transition: color 0.3s;
     &:hover {
       cursor: pointer;
+      color: rgb(90, 85, 85);
     }
   }
 }

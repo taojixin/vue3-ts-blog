@@ -2,7 +2,7 @@
   <div class="back-to-top"
        @click="backToTop"
        v-show="isHidden">
-    >
+    <i class="iconfont icon-dingbu top"></i>
   </div>
 </template>
 
@@ -20,26 +20,32 @@ window.addEventListener('scroll', () => {
   }
 })
 const backToTop = () => {
+  isHidden.value = false
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   })
-  isHidden.value = false
 }
 </script>
 
 <style lang="less" scoped>
 .back-to-top {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
-  height: 30px;
-  width: 30px;
+  right: 20px;
+  bottom: 10px;
   border-radius: 30px;
-  background-color: blue;
   z-index: 999;
   &:hover {
     cursor: pointer;
+    .top {
+      font-size: 55px;
+      color: gray;
+    }
+  }
+
+  .top {
+    font-size: 50px;
+    font-weight: bold;
   }
 }
 </style>

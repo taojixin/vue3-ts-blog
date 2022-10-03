@@ -38,6 +38,11 @@
   align-items: center;
   height: 300px;
   background-color: white;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: translateY(5px);
+  }
 
   .my-img {
     width: 100px;
