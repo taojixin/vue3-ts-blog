@@ -18,6 +18,8 @@ const hidden = useHiddenStore()
 // 判读窗口大小控制menus的显示与隐藏
 if (document.documentElement.clientWidth < 700) {
   hidden.isShow = false
+}
+if (document.documentElement.clientWidth < 1000) {
   hidden.isHomeLeft = false
 }
 window.addEventListener('resize', () => {

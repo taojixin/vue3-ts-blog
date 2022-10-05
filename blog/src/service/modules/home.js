@@ -1,5 +1,5 @@
 import ynRequest from '../request/index'
 
-export function getSome() {
-  return ynRequest.get({ url: '/home' })
+export async function getEntriesLists() {
+  return await ynRequest.get({ url: '/article/entries' })
 }

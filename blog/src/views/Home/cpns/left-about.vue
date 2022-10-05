@@ -53,8 +53,9 @@
 
   .my-title {
     margin: 5px 0;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    color: rgb(98, 91, 91);
   }
 
   .motto {
@@ -63,6 +64,11 @@
     font-weight: bold;
     color: rgb(87, 63, 63);
     text-shadow: 1px 1px 2px gray;
+    transition: transform 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(2px);
+    }
   }
 
   .contact {

@@ -14,8 +14,8 @@ a {
 
 /* 每个页面都有的样式：如home页 */
 .page-common {
-  margin: 70px 5% 0;
-  border: 1px solid black;
+  margin: 30px 5% 0;
+  /* border: 1px solid black; */
 }
 
 /* 更改滚动条样式 */
