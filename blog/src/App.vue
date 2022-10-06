@@ -1,8 +1,8 @@
 <template>
-  <top-nav-bar></top-nav-bar>
-  <fall-nav-bar v-show="hidden.isShowTop" />
+  <TopNavBar></TopNavBar>
+  <FallNavBar v-show="hidden.isShowTop" />
   <router-view />
-  <back-to-top />
+  <BackToTop />
 </template>
 
 <script setup>

@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import LeftAbout from './left-about.vue'
-import LeftAnnouncement from './left-announcement.vue'
+import LeftAbout from './LeftAbout.vue'
+import LeftAnnouncement from './LeftAnnouncement.vue'
 </script>
 
 <style lang="less" scoped>

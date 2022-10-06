@@ -3,10 +3,10 @@
     <div class="home page-common">
       <hello-visitor></hello-visitor>
       <div class="top">
-        <left v-show="hidden.isHomeLeft" />
-        <center />
+        <Left v-show="hidden.isHomeLeft" />
+        <Center />
       </div>
-      <bottom />
+      <Bottom />
     </div>
   </transition>
 </template>
@@ -14,8 +14,8 @@
 <script setup>
 import HelloVisitor from '@/components/HelloVisitor'
 import useHiddenStore from '@/stores/modules/hidden'
-import Bottom from './cpns/bottom.vue'
-import Center from './cpns/center.vue'
+import Bottom from './cpns/Bottom.vue'
+import Center from './cpns/Center.vue'
 import Left from './cpns/left.vue'
 
 const hidden = useHiddenStore()

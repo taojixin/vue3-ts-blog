@@ -9,7 +9,7 @@
 
 <script setup>
 import { getEntriesLists } from '@/service/index'
-import entry from '@/views/Home/cpns/entry.vue'
+import Entry from '@/views/Home/cpns/Entry.vue'
 import { ref } from 'vue'
 
 let datas = ref([])
