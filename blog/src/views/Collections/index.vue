@@ -3,30 +3,204 @@
     <div class="classification">
       <span class="sort-item"
             v-for="item in sortList"
-            :key="item">{{item}}</span>
+            :key="item">{{item.sortName}}</span>
     </div>
     <div class="collection-content">
-      <div class="sort"
-           v-for="item in sortList"
-           :key="item">
-        <h1>{{item}}</h1>
-
-      </div>
+      <CollectionList :sort-list="sortList" />
     </div>
   </div>
 </template>
 
 <script setup>
+import CollectionList from './cpns/CollectionList.vue'
 const { ref } = require('@vue/reactivity')
 
 const sortList = ref([
-  '常用官网',
-  '常用文档',
-  '实用工具',
-  '常逛网站',
-  '工具库',
-  'Vue全家桶',
-  '收藏的网站'
+  {
+    id: 1,
+    sortName: '常用网页',
+    item: [
+      {
+        itemName: 'GitHub',
+        sketch: '全球最大同性交友平台，哈哈。',
+        iconUrl: 'http://libertys.cn/img/sortimg/github.png',
+        src: 'https://github.com'
+      },
+      {
+        itemName: 'CSDN',
+        sketch: '适合新手解决问题的平台。',
+        iconUrl: 'http://libertys.cn/img/sortimg/csdn.png',
+        src: 'https://www.csdn.net/'
+      },
+      {
+        itemName: '哔哩哔哩',
+        sketch: '无聊摸鱼用。',
+        iconUrl: 'http://libertys.cn/img/sortimg/bilibili.png',
+        src: 'https://www.bilibili.com/'
+      }
+    ]
+  },
+  {
+    id: 2,
+    sortName: '常用文档',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  },
+  {
+    id: 3,
+    sortName: '实用工具',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  },
+  {
+    id: 4,
+    sortName: '常逛网站',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  },
+  {
+    id: 5,
+    sortName: '工具库',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  },
+  {
+    id: 6,
+    sortName: 'Vue全家桶',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  },
+  {
+    id: 7,
+    sortName: '收藏的网站',
+    item: [
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      },
+      {
+        itemName: 'Vue',
+        sketch: 'Vue官网，可查询相关API。',
+        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+      }
+    ]
+  }
 ])
 </script>
 
