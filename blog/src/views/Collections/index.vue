@@ -45,34 +45,35 @@ const sortList = ref([
     sortName: '常用文档',
     item: [
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'MDN',
+        sketch: '超级好用的前端文档(超级推荐)。',
+        iconUrl: 'http://libertys.cn/img/sortimg/mdn.jpeg',
+        src: 'https://developer.mozilla.org/zh-CN/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'ECMAScript 6 入门教程',
+        sketch:
+          '阮一峰著，对涉及的语法知识给予详细介绍，并给出大量简洁易懂的示例代码。。',
+        iconUrl: 'http://libertys.cn/img/sortimg/es6.png',
+        src: 'https://es6.ruanyifeng.com/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: '菜鸟教程',
+        sketch: '很适合新手的文档。',
+        iconUrl: 'http://libertys.cn/img/sortimg/cainiao.png',
+        src: 'https://www.runoob.com/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'Node.js官方文档',
+        sketch: 'Node.js所有API，没事研究node的时候常看。',
+        iconUrl: 'http://libertys.cn/img/sortimg/node.png',
+        src: 'https://nodejs.org/dist/latest-v16.x/docs/api/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'Vue3官网',
+        sketch: 'Vue3官网，中文，很友好。',
+        iconUrl: 'http://libertys.cn/img/sortimg/vue3.png',
+        src: 'https://cn.vuejs.org/guide/introduction.html'
       }
     ]
   },
@@ -81,19 +82,22 @@ const sortList = ref([
     sortName: '实用工具',
     item: [
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'Snipaste',
+        sketch: '超级好用的截图取色工具(超级推荐)。',
+        iconUrl: 'http://libertys.cn/img/sortimg/snipaste.png',
+        src: 'https://www.snipaste.com/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'uTools',
+        sketch: '新一代效率工具平台自由组合插件应用，(超级推荐)。',
+        iconUrl: 'http://libertys.cn/img/sortimg/utools.png',
+        src: 'https://www.u.tools/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'iTab新标签页',
+        sketch: '代替浏览器首页，简洁优美无广告。',
+        iconUrl: 'http://libertys.cn/img/sortimg/itab.png',
+        src: 'https://itab.link/'
       }
     ]
   },
