@@ -155,27 +155,30 @@ const sortList = ref([
   },
   {
     id: 6,
-    sortName: 'Vue全家桶',
+    sortName: 'Vue相关',
     item: [
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'Vue3.0',
+        sketch: 'Vue3.0官网，组合式API。',
+        iconUrl: 'http://libertys.cn/img/sortimg/vue3.png',
+        src: 'https://cn.vuejs.org/guide/introduction.html'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'VueRouter',
+        sketch: ' ',
+        iconUrl: 'http://libertys.cn/img/sortimg/vuerouter.jpeg',
+        src: 'https://router.vuejs.org/zh/installation.html'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'VueX',
+        sketch: 'Vue状态管理工具(v4.x)。',
+        iconUrl: 'http://libertys.cn/img/sortimg/vuex.png',
+        src: 'https://vuex.vuejs.org/zh/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'Pinia',
+        sketch: 'Vue官方推荐的状态管理工具，更加支持ts。',
+        iconUrl: 'http://libertys.cn/img/sortimg/pinia.png'
       }
     ]
   },

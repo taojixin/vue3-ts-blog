@@ -14,7 +14,7 @@
                      alt="">
               </div>
               <div class="right">
-                <h3>{{item.itemName}}</h3>
+                <div class="title">{{item.itemName}}</div>
                 <p>{{item.sketch}}</p>
               </div>
             </div>
@@ -61,13 +61,13 @@ defineProps({
         }
 
         .item-box {
-          width: 200px;
           height: 100px;
           display: flex;
 
           .left {
             width: 100px;
             height: 100px;
+            margin-left: 10px;
             img {
               width: 100%;
               height: 100%;
@@ -78,8 +78,9 @@ defineProps({
             flex: 1;
             padding-left: 10px;
 
-            h3 {
-              margin: 0;
+            .title {
+              font-size: 14px;
+              font-weight: bold;
             }
             p {
               size: 12px;
