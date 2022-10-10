@@ -1,5 +1,4 @@
 module.exports = {
-  publicPath: '/blog/',
   // 跨域代理
   devServer: {
     proxy: {

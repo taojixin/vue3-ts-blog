@@ -118,42 +118,6 @@ const sortList = ref([
     ]
   },
   {
-    id: 5,
-    sortName: '工具库',
-    item: [
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      },
-      {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
-      }
-    ]
-  },
-  {
     id: 6,
     sortName: 'Vue相关',
     item: [
@@ -187,24 +151,28 @@ const sortList = ref([
     sortName: '收藏的网站',
     item: [
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'snippet generator',
+        sketch: 'vscode代码片段生成。',
+        iconUrl: 'http://libertys.cn/img/blog/chichichi.gif',
+        src: 'https://snippet-generator.app/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: '印记中文',
+        sketch: '很多前端的中文文档。',
+        iconUrl: 'http://libertys.cn/img/sortimg/yinji.png',
+        src: 'https://docschina.org/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: '在线工具箱',
+        sketch: '很多实用工具。',
+        iconUrl: 'http://libertys.cn/img/blog/lyj.gif',
+        src: 'https://tool.lu/'
       },
       {
-        itemName: 'Vue',
-        sketch: 'Vue官网，可查询相关API。',
-        iconUrl: 'http://libertys.cn/img/yuansheng/yinyue.png'
+        itemName: 'ico图标制作',
+        sketch: '在线制作ico图标。',
+        iconUrl: 'http://libertys.cn/img/blog/ddd.gif',
+        src: 'https://www.bitbug.net/'
       }
     ]
   }
