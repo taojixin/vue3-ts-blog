@@ -1,14 +1,20 @@
 <template>
   <div class="about page-common">
-    <Content :dataList="data"></Content>
-    <SideBar :dataList="data"></SideBar>
+    <div class="content">
+      <Content :dataList="data"
+               v-model="currHigh"
+               :selecteBar="selecteBar"></Content>
+      <SideBar :dataList="data"
+               :currHigh="currHigh"
+               @selectedIndexBar="selectedIndexBar"></SideBar>
+    </div>
   </div>
 </template>
 
 <script setup>
 import Content from '@/components/IndexBar/Content.vue'
 import SideBar from '@/components/IndexBar/SideBar.vue'
-import { ref } from '@vue/reactivity'
+import { ref } from 'vue'
 
 const data = ref([
   {
@@ -67,6 +73,18 @@ const data = ref([
     content: 'a'
   }
 ])
+const currHigh = ref('')
+const selecteBar = ref('')
+const selectedIndexBar = (title) => {
+  selecteBar.value = title
+}
 </script>
 <style lang="less" scoped>
+.about {
+  margin-top: 60px;
+  .content {
+    position: relative;
+    top: 60px;
+  }
+}
 </style>
