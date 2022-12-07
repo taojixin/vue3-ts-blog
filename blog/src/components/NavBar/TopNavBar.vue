@@ -1,48 +1,24 @@
 <template>
   <transition name="top">
-    <div class="top-nav-bar"
-         ref="topNav"
-         v-if="isShowTopBar">
-      <div class="title"
-           @click="toPage('home')">
+    <div class="top-nav-bar" ref="topNav" v-if="isShowTopBar">
+      <div class="title" @click="toPage('home')">
         <span class="text">Libertys</span>
       </div>
-      <div class="menus"
-           v-if="hidden.isShow">
-        <span class="item"
-              @click="toPage('home')">
-          <i class="iconfont icon-shouyefill size"></i>
-          首页
-        </span>
-        <span class="item"
-              @click="toPage('articles')">
-          <i class="iconfont icon-16 size"></i>
-          文章
-        </span>
-        <span class="item"
-              @click="toPage('collections')">
-          <i class="iconfont icon-shoucangjia size"></i>
-          收藏
-        </span>
-        <span class="item"
-              @click="toPage('life')">
-          <i class="iconfont icon-icon size"></i>
-          生活
-        </span>
-        <span class="item"
-              @click="toPage('message')">
-          <i class="iconfont icon-liuyanfill size"></i>
-          留言
-        </span>
-        <span class="item"
-              @click="toPage('about')">
-          <i class="iconfont icon-guanyu size"></i>
-          关于
-        </span>
+      <!-- 导航列表 -->
+      <div class="menus" v-if="hidden.isShow">
+        <template v-for="item in navList" :key="item.id">
+          <span class="item" @click="toPage(item.path)">
+            <i :class="item.iconClass"></i>
+            {{ item.text }}
+          </span>
+        </template>
       </div>
-      <div class="select iconfont icon-caidan"
-           v-if="!hidden.isShow"
-           @click="changeFallNavBar"></div>
+      <!-- 窄屏幕 -->
+      <div
+        class="select iconfont icon-caidan"
+        v-if="!hidden.isShow"
+        @click="changeFallNavBar"
+      ></div>
     </div>
   </transition>
 </template>
@@ -51,6 +27,46 @@
 import useHiddenStore from '@/stores/modules/hidden'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+
+// 导航列表
+const navList = [
+  {
+    id: 0,
+    path: 'home',
+    text: '首页',
+    iconClass: 'iconfont icon-shouyefill size'
+  },
+  {
+    id: 1,
+    path: 'articles',
+    text: '文章',
+    iconClass: 'iconfont icon-16 size'
+  },
+  {
+    id: 2,
+    path: 'collections',
+    text: '收藏',
+    iconClass: 'iconfont icon-shoucangjia size'
+  },
+  {
+    id: 3,
+    path: 'life',
+    text: '生活',
+    iconClass: 'iconfont icon-icon size'
+  },
+  {
+    id: 4,
+    path: 'message',
+    text: '留言',
+    iconClass: 'iconfont icon-liuyanfill size'
+  },
+  {
+    id: 5,
+    path: 'about',
+    text: '关于',
+    iconClass: 'iconfont icon-guanyu size'
+  }
+]
 const router = useRouter()
 
 // 响应式

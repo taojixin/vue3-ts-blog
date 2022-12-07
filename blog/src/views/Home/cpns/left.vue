@@ -1,12 +1,11 @@
 <template>
-  <transition name="left">
+  <transition name="leftbox">
     <div class="left">
       <left-about />
       <left-announcement />
       <div class="new-aritcle">最新文章</div>
     </div>
   </transition>
-
 </template>
 
 <script setup>
@@ -22,18 +21,20 @@ import LeftAnnouncement from './LeftAnnouncement.vue'
   margin-right: 30px;
 }
 
-.left-enter-from,
-.left-leave-to {
+.leftbox-enter-from,
+.leftbox-leave-to {
   opacity: 0;
+  transform: translate(-500px, 0);
 }
 
-.left-enter-to,
-.left-leave-from {
+.leftbox-enter-to,
+.leftbox-leave-from {
   opacity: 1;
+  transform: translate(0, 0);
 }
 
-.left-enter-active,
-.left-leave-active {
+.leftbox-enter-active,
+.leftbox-leave-active {
   transition: all 0.3s ease;
 }
 </style>
