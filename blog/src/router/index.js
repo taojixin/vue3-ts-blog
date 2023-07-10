@@ -32,7 +32,7 @@ const routes = [
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
-    component: () => import('@/components/NotFound')
+    component: () => import('@/components/not-found')
   }
 ]
 
